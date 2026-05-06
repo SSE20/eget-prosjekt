@@ -17,7 +17,7 @@
         }
 
         canvas {
-            background-color: grey;
+            background-color: #f2f2f2;
             border: brown 7px groove;
             cursor: pointer;
         }
@@ -32,11 +32,12 @@
 <body>
     <div class="container">
         <canvas></canvas>
-
     </div>
 
     <img src="./images/cow-icon.png" alt="" id="cow-icon" style="display: none;">
     <!-- none slik at den ikke synes/finnes utenfor canvasen -->
+
+    <i class="fa-solid fa-trash-can remove-all-btn" style="display: none;"></i>
 
     <script>
         const canvas = document.querySelector("canvas")
@@ -88,6 +89,10 @@
             }
         })
 
+        const removeAllBtn = document.querySelector(".remove-all-btn")
+        removeAllBtn.onload = function () {
+            ctx.drawImage(removeAllBtn, 980, 20, 25, 20)
+        }
     </script>
 </body>
 
