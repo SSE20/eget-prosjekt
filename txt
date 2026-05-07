@@ -1,0 +1,7 @@
+ting jeg vil ha med på siden:
+
+- sånn at man kan trykke på et bilde, så flippes det rundt, og så kan man lese en tekst på baksiden
+- sånn at man kan bla gjennom bilder, sånn som på netflix npr man blar gjennom filmer
+- bento-grid
+
+- i nav-baren når man trykker på en av greiene kommer det opp en liste med linker (en pil som bytter fra å gå opp/ned)
