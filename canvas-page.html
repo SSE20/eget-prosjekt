@@ -41,6 +41,7 @@
             top: 130px;
             right: 260px;
         }
+
     </style>
 </head>
 
@@ -49,8 +50,12 @@
         <canvas></canvas>
     </div>
 
-    <img src="./images/cow-icon.png" alt="" id="cow-icon" style="display: none;">
-    <!-- none slik at den ikke synes/finnes utenfor canvasen -->
+    <img src="./images/cow-icon.png" alt="" id="cow-icon" style="display: none;"> <!-- none slik at den ikke synes/finnes utenfor canvasen -->
+    <img src="./images/sun-icon.png" alt="sun-icon" id="sun-icon" style="display: none;">
+    <img src="./images/sky-icon.png" alt="cloud-icon" id="cloud-icon" style="display: none;">
+    <img src="./images/flower-icon.png" alt="flower-icon" id="flower-icon" style="display: none;">
+    <img src="./images/redflower-icon.png" alt="redflower-icon" id="redflower-icon" style="display: none;">
+    
 
     <i class="fa-solid fa-trash-can remove-all-btn"></i>
 
@@ -75,34 +80,128 @@
         ctx.fillStyle = "green"
         const groundEl = ctx.fillRect(250, 400, 750, 200)
 
+
+
+
+
         const cowIcon = document.getElementById("cow-icon")
-        const ICONWIDTH = 125
-        let ICONHEIGHT
+        const cowWidth = 100
+        let cowHeight
         cowIcon.onload = function () {
-            ICONHEIGHT = (cowIcon.naturalHeight / cowIcon.naturalWidth) * ICONWIDTH
-            const x = (250 - ICONWIDTH) / 2
+            cowHeight = (cowIcon.naturalHeight / cowIcon.naturalWidth) * cowWidth
+            const x = (250 - cowWidth) / 2
             const y = 50
-            ctx.drawImage(cowIcon, x, y, ICONWIDTH, ICONHEIGHT)
+            ctx.drawImage(cowIcon, x, y, cowWidth, cowHeight)
         }
+
+        const sunIcon = document.getElementById("sun-icon")
+        let sunHeightWidth
+        sunIcon.onload = function () {
+            sunHeightWidth = (sunIcon.naturalHeight / sunIcon.naturalWidth) * 150
+            const x = (250 - sunHeightWidth) / 2
+            const y = 170
+            ctx.drawImage(sunIcon, x, y, sunHeightWidth, sunHeightWidth)
+        }
+
+        const cloudIcon = document.getElementById("cloud-icon")
+        const cloudWidth = 250
+        let cloudHeight
+        cloudIcon.onload = function () {
+            cloudHeight = (cloudIcon.naturalHeight / cloudIcon.naturalWidth) * cloudWidth
+            const x = 0
+            const y = 300
+            ctx.drawImage(cloudIcon, x, y, cloudWidth, cloudHeight)
+        }
+
+        const flowerIcon = document.getElementById("flower-icon")
+        const flowerWidth = 60
+        let flowerHeight
+        flowerIcon.onload = function () {
+            flowerHeight = (flowerIcon.naturalHeight / flowerIcon.naturalWidth) * flowerWidth
+            const gap = 20 // mellomrom mellom blomstene
+            const totalWidth = flowerWidth + gap + redflowerWidth
+            const x = (250 - totalWidth) / 2
+            const y = 450
+            ctx.drawImage(flowerIcon, x, y, flowerWidth, flowerHeight)
+        }
+        const redflowerIcon = document.getElementById("redflower-icon")
+        const redflowerWidth = 90
+        let redflowerHeight
+        redflowerIcon.onload = function () {
+            redflowerHeight = (redflowerIcon.naturalHeight / redflowerIcon.naturalWidth) * redflowerWidth
+            const gap = 20 // mellomrom mellom blomstene
+            const totalWidth = flowerWidth + gap + redflowerWidth
+            const x = (250 - totalWidth) / 2 + flowerWidth + gap
+            const y = 450
+            ctx.drawImage(redflowerIcon, x, y, redflowerWidth, redflowerHeight)
+        }
+
+
+
+
 
         /* HVIS MAN TRYKKER PÅ ET IKON, BLIR DET VALGT */
         let selectedIcon = null
         canvas.addEventListener("click", function (e) {
-            const rect = canvas.getBoundingClientRect() // getBoundingClientRect = sjekker posisjonen til cow-icon når man trykker på den (før den flyttes)
+            const rect = canvas.getBoundingClientRect() // getBoundingClientRect = sjekker posisjonen til ikonet du trykker på når man trykker på den (før den flyttes)
             const mx = e.clientX - rect.left /* mx = move x */
             const my = e.clientY - rect.top
 
             // Klikket innenfor ikonet?
-            if (mx < 250 && my > 50 && my < 50 + ICONHEIGHT) {
+            if (mx < 250 && my > 50 && my < 50 + cowHeight) {
                 selectedIcon = "cow"
                 return
             }
-
             // Klikket i tegneområdet med valgt ikon?
-            if (selectedIcon && mx > 250 + ICONWIDTH/2) { /* 250 + ICONWIDTH/2 gjør at kua ikke kan komme over på icon-boxen */
-                ctx.drawImage(cowIcon, mx - ICONWIDTH/2, my - ICONHEIGHT/2, ICONWIDTH, ICONHEIGHT) /* slik at bildet blir plassert på midten der musen klikker */
+            if (selectedIcon == "cow" && mx > 250 + cowWidth/2) { /* 250 + cowWidth/2 gjør at kua ikke kan komme over på icon-boxen */
+                ctx.drawImage(cowIcon, mx - cowWidth/2, my - cowHeight/2, cowWidth, cowHeight) /* slik at bildet blir plassert på midten der musen klikker */
+            }
+
+
+
+            // SOL-LØKKE******************
+            if (mx < 250 && my > 170 && my < 170 + sunHeightWidth) {
+                selectedIcon = "sun"
+                return
+            }if (selectedIcon == "sun" && mx > 250 + sunHeightWidth/2) { 
+                ctx.drawImage(sunIcon, mx - sunHeightWidth/2, my - sunHeightWidth/2, sunHeightWidth, sunHeightWidth)
+            }
+            
+            // SKY-LØKKE******************
+            if (mx < 250 && my > 300 && my < 300 + cloudHeight) {
+                selectedIcon = "cloud"
+                return
+            }if (selectedIcon == "cloud" && mx > 250 + cloudWidth/2) { 
+                ctx.drawImage(cloudIcon, mx - cloudWidth/2, my - cloudHeight/2, cloudWidth, cloudHeight)
+            }
+
+            // BLOMST-LØKKE******************
+            if (mx < 125 && my > 450 && my < 450 + flowerHeight) {
+                selectedIcon = "flower"
+                return
+            }if (selectedIcon == "flower" && mx > 250 + flowerWidth/2) { 
+                ctx.drawImage(flowerIcon, mx - flowerWidth/2, my - flowerHeight/2, flowerWidth, flowerHeight)
+            }
+
+            // BLOMST-LØKKE******************
+            if (mx < 250 && mx > 125 && my > 450 && my < 450 + redflowerHeight) {
+                selectedIcon = "redflower"
+                return
+            }if (selectedIcon == "redflower" && mx > 250 + redflowerWidth/2) { 
+                ctx.drawImage(redflowerIcon, mx - redflowerWidth/2, my - redflowerHeight/2, redflowerWidth, redflowerHeight)
             }
         })
+
+
+
+
+
+        const removeAllBtn = document.querySelector(".remove-all-btn")
+        removeAllBtn.addEventListener("click", function(){
+            location.reload() /* refresher siden */
+        })
+
+
     </script>
 </body>
 
