@@ -16,3 +16,10 @@ sortByBtn.addEventListener("click", function(){
         arrowUpEl.style.opacity = "0"
     }
 })
+
+
+
+
+/* ADD TO CART */
+
+const addToCartBtn = document.querySelectorAll(".addToCartBtn")
