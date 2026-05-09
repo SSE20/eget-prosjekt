@@ -21,8 +21,47 @@ sortByBtn.addEventListener("click", function () {
 
 
 
+
+
 /* ADD TO CART */
 const addToCartBtn = document.querySelectorAll(".addToCartBtn")
+const varelagtTilEl = document.querySelector(".vareLagtTil")
+
+let antTrykk = 0
+function leggTil() {
+    varelagtTilEl.style.opacity = 1
+    antTrykk++
+    varelagtTilEl.innerHTML = antTrykk
+}
+
+for (const btn of addToCartBtn) {
+    let sekunder = 3
+    btn.addEventListener("click", function () { /* gjør at cart-knappen er grønn i tre sek etter å ha trykket på add to cart */
+        btn.style.backgroundColor = "green"
+        leggTil()
+
+        byttFarge = setInterval(function () {
+            sekunder--
+            if (sekunder <= 0) {
+                btn.style.backgroundColor = "var(--red)"
+            }
+        }, 1000)
+
+
+    })
+}
+
+
+
+
+/* ADD TO FAVOURITES */
+const addToFavouritesBtn = document.querySelectorAll(".addToFavouritesBtn")
+
+for (const btn of addToFavouritesBtn) {
+    btn.addEventListener("click", function(){
+        btn.classList.toggle("added")
+    })
+}
 
 
 
@@ -40,9 +79,7 @@ for (const box of gridBoxes) {
 
 
     img1.addEventListener("mouseout", function () {
-        
+
         img2.classList.remove("show")
     })
 }
-
-

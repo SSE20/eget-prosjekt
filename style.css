@@ -104,6 +104,8 @@ a.nav-active,
     display: flex;
     align-items: center;
     gap: 7px;
+
+    position: relative;
 }
 
 .nav-btns button {
@@ -115,6 +117,24 @@ a.nav-active,
     border-radius: 50%;
 
     cursor: pointer;
+}
+
+.vareLagtTil{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    background-color: var(--blue);
+    padding: 2px;
+    border-radius: 50%;
+
+    font-size: 14px;
+    text-align: center;
+
+    height: 21.6px;
+    width: 21.6px;
+
+    opacity: 0;
 }
 
 .logo {
@@ -356,7 +376,6 @@ li.select-active {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
 
     border-radius: var(--br);
     transition: var(--transition);
@@ -401,6 +420,11 @@ li.select-active {
     color: var(--red);
 
     transition: var(--transition);
+}
+
+.addToFavouritesBtn.added{
+    background-color: var(--pink);
+    color: var(--red);
 }
 
 .product-text {
