@@ -57,12 +57,22 @@
                 </ul>
                 <ul class="filter">
                     <li id="filterBtn">Filtrer <i class="fa-solid fa-sliders sliders-icon"></i></li>
-                    <li id="sortByBtn">Sorter 
+                    <li id="sortByBtn">Sorter
                         <i class="fa-solid fa-angle-down arrow-down"></i>
                         <i class="fa-solid fa-angle-up arrow-up"></i>
+
                     </li>
                 </ul>
             </div>
+
+            <div class="sortByPopup">
+                <ul>
+                    <li class="sorter-active"><i class="fa-solid fa-check check-icon"></i>Populært</li>
+                    <li><i class="fa-solid fa-check check-icon"></i>Laveste pris</li>
+                    <li><i class="fa-solid fa-check check-icon"></i>Høyeste pris</li>
+                </ul>
+            </div>
+
         </div>
 
     </section>
@@ -78,8 +88,8 @@
                             <p class="pris">529 kr</p>
                         </div>
                         <button class="addToCartBtn"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
-
                     </div>
+                    <button class="addToFavouritesBtn"><i class="fa-solid fa-heart heart-icon"></i></button>
                 </div>
                 <div class="grid-box">
                     <img src="./images/index-img/DIY-rock-painting-1.webp" alt="" class="gridBoxImg">
@@ -90,6 +100,7 @@
                         </div>
                         <button class="addToCartBtn"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
                     </div>
+                    <button class="addToFavouritesBtn"><i class="fa-solid fa-heart heart-icon"></i></button>
                 </div>
                 <div class="grid-box">
                     <img src="./images/index-img/embroidery-kit-1.webp" alt="" class="gridBoxImg">
@@ -100,6 +111,7 @@
                         </div>
                         <button class="addToCartBtn"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
                     </div>
+                    <button class="addToFavouritesBtn"><i class="fa-solid fa-heart heart-icon"></i></button>
                 </div>
                 <div class="grid-box">
                     <img src="./images/index-img/gatekritt-1.webp" alt="" class="gridBoxImg">
@@ -110,6 +122,7 @@
                         </div>
                         <button class="addToCartBtn"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
                     </div>
+                    <button class="addToFavouritesBtn"><i class="fa-solid fa-heart heart-icon"></i></button>
                 </div>
                 <div class="grid-box">
                     <img src="./images/index-img/magnetic-tiles-1.webp" alt="" class="gridBoxImg">
@@ -120,6 +133,7 @@
                         </div>
                         <button class="addToCartBtn"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
                     </div>
+                    <button class="addToFavouritesBtn"><i class="fa-solid fa-heart heart-icon"></i></button>
                 </div>
                 <div class="grid-box">
                     <img src="./images/index-img/malekoster-1.webp" alt="" class="gridBoxImg">
@@ -130,6 +144,7 @@
                         </div>
                         <button class="addToCartBtn"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
                     </div>
+                    <button class="addToFavouritesBtn"><i class="fa-solid fa-heart heart-icon"></i></button>
                 </div>
             </div>
 
@@ -144,40 +159,42 @@
         <div class="container">
             <div class="logo"><a href="#"><img src="./images/logo.png" alt="logo"></a></div>
             <p class="footer-grid">
-                <div class="footer-box">
-                    <h2>Informasjon</h2>
-                    <ul>
-                        <li><a href="#">Kontakt oss</a></li>
-                        <li><a href="#">Finn butikk</a></li>
-                        <li><a href="#">Spørsmål & svar</a></li>
-                        <li><a href="#">Favoritter</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-                <div class="footer-box">
-                    <h2>Kundeklubb</h2>
-                    <ul>
-                        <li><a href="#">Om kundeklubben</a></li>
-                        <li><a href="#">Medlemsfordeler</a></li>
-                        <li><a href="#">Opprett konto</a></li>
-                        <li><a href="#">Glemt passord</a></li>
-                    </ul>
-                </div>
-                <div class="footer-box">
-                    <h2>Om oss</h2>
-                    <ul>
-                        <li><a href="#">Dette er Panduro</a></li>
-                        <li><a href="#">Ledige stillinger</a></li>
-                        <li><a href="#">Samarbeidspartnere</a></li>
-                        <li><a href="#">Pressekontakt</a></li>
-                        <li><a href="#">Bærekraft</a></li>
-                        <li><a href="#">Sponsing</a></li>
-                    </ul>
-                </div>
+            <div class="footer-box">
+                <h2>Informasjon</h2>
+                <ul>
+                    <li><a href="#">Kontakt oss</a></li>
+                    <li><a href="#">Finn butikk</a></li>
+                    <li><a href="#">Spørsmål & svar</a></li>
+                    <li><a href="#">Favoritter</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>Kundeklubb</h2>
+                <ul>
+                    <li><a href="#">Om kundeklubben</a></li>
+                    <li><a href="#">Medlemsfordeler</a></li>
+                    <li><a href="#">Opprett konto</a></li>
+                    <li><a href="#">Glemt passord</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>Om oss</h2>
+                <ul>
+                    <li><a href="#">Dette er Panduro</a></li>
+                    <li><a href="#">Ledige stillinger</a></li>
+                    <li><a href="#">Samarbeidspartnere</a></li>
+                    <li><a href="#">Pressekontakt</a></li>
+                    <li><a href="#">Bærekraft</a></li>
+                    <li><a href="#">Sponsing</a></li>
+                </ul>
+            </div>
             </p>
 
         </div>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
