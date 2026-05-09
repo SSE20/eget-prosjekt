@@ -348,9 +348,38 @@ li.select-active {
 }
 
 .gridBoxImg {
-    background-color: var(--red);
     padding: 10px;
     border-radius: var(--br);
+}
+
+.gridBoxImg.bilde-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    border-radius: var(--br);
+    transition: var(--transition);
+
+    pointer-events: none; /* slik at når man tar mousover, vil ikke bildet fange opp/være i veien for musen */
+    opacity: 0;
+}
+
+.gridBoxImg.bilde-2.show {
+    opacity: 1;
+}
+
+.gridBoxImg.red{
+    background-color: var(--red);
+}
+.gridBoxImg.yellow{
+    background-color: var(--yellow);
+}
+.gridBoxImg.pink{
+    background-color: var(--pink);
+}
+.gridBoxImg.blue{
+    background-color: var(--blue);
 }
 
 .addToFavouritesBtn {
@@ -382,6 +411,7 @@ li.select-active {
     background-color: var(--yellow-lightest);
     border-radius: var(--br);
     padding: 20px;
+    margin-top: 10px;
 }
 
 h3.product {
