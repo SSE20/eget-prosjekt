@@ -60,6 +60,8 @@ nav {
     top: 0;
 
     margin: 10px 0;
+
+    background-color: var(--yellow-light);
 }
 
 nav .container {
@@ -114,6 +116,10 @@ a.nav-active,
     cursor: pointer;
 }
 
+.logo{
+    cursor: pointer;
+}
+
 
 
 
@@ -137,19 +143,22 @@ a.nav-active,
     gap: 50px;
 }
 
-.nyKolleksjon {
+.nyttSpill {
     background-color: var(--yellow-lightest);
-    color: var(--red);
     padding: 10px 60px;
     border-radius: var(--br);
-    font-size: 20px;
 
     cursor: pointer;
 
     border: solid 2px transparent;
 }
 
-.nyKolleksjon:hover {
+.nyttSpill a{
+    font-size: 20px;
+    color: var(--red);
+}
+
+.nyttSpill:hover {
     border: solid 2px var(--red);
     transition: var(--transition);
 }
@@ -257,4 +266,154 @@ li.select-active{
 
 .arrow-up{
     display: none;
+}
+
+
+
+
+/* SIDE-3********* */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    padding: 50px 0;
+}
+
+.grid-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.gridBoxImg{
+    background-color: var(--red);
+    padding: 10px;
+    border-radius: var(--br);
+}
+
+.product-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--yellow-lightest);
+    border-radius: var(--br);
+    padding: 20px;
+}
+
+h3.product{
+    color: var(--red);
+    font-family: var(--ff-headings);
+
+    font-size: 20px;
+}
+
+.pris{
+    color: var(--p-color-blue);
+    font-weight: 700;
+}
+
+.nyPris{
+    font-weight: 700;
+    color: var(--p-color-blue);
+}
+
+.gammelPris{
+    margin-left: 10px;
+    text-decoration: line-through;
+    color: var(--red);
+}
+
+.addToCartBtn{
+    color: var(--yellow-lightest);
+    background-color: var(--red);
+    border-radius: 50%;
+    border: none;
+    padding: 5px;
+}
+
+.addToCartBtn:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: var(--transition);
+}
+
+.hentFlereProdukter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hentFlereProdukter p{
+    text-align: center;
+    color: var(--p-color-blue);
+}
+
+.hentFlereBtn{
+    margin: 0 auto;
+    padding: 10px 20px;
+    
+    border: none;
+    border-radius: var(--br);
+    background-color: var(--yellow);
+    color: var(--red);
+
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hentFlereBtn:hover{
+    background-color: var(--red);
+    color: var(--yellow-light);
+    border-radius: var(--br);
+
+    transition: var(--transition);
+
+    cursor: pointer;
+}
+
+
+
+
+
+/* FOOTER********** */
+
+footer{
+    background-color: var(--red);
+    border-radius: var(--br);
+    margin: 50px 5px 5px 5px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 50px 0;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+h2{
+    color: var(--yellow-light);
+    font-family: var(--ff-headings);
+    margin-bottom: 10px;
+}
+
+.footer-box ul{
+    list-style-type: none;
+}
+
+.footer-box a{
+    color: var(--yellow-light);
+    line-height: 2;
+}
+
+.footer-box a:hover{
+    text-decoration: underline;
 }

@@ -15,3 +15,7 @@ bla opp til toppen - knapp
 
 
 FIKS: filter og sort by
+
+skrive sånn -50% på et produkt og streke over den gamle prisen, og vise den nye på siden
+
+når det er mousover på et produkt, endres bildet til det neste
