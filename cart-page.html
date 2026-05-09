@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduro Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo"><a href="#"><img src="./images/logo.png" alt="logo"></a></div>
+            <div class="nav-links">
+                <a href="#">Hjem</a>
+                <a href="#" class="nav-active product">Produkter</a>
+                <a href="#">Inspirasjon</a>
+                <a href="#">Om oss</a>
+            </div>
+            <div class="nav-btns">
+                <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="favourites"><i class="fa-solid fa-heart"></i></button>
+                <button class="cart-icon"><i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+
+                <div class="vareLagtTil">0</div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <section class="product-page">
+        <div class="container">
+            <a href="index.html">
+                <div class="backToIndex">
+                    <i class="fa-solid fa-angle-left arrow-left"></i>
+                    <p>Hjem</p>
+                </div>
+            </a>
+
+            <div class="product-grid-container">
+                <div class="product-grid-box first-box">
+                    <div class="product-images">
+                        <div class="smallImg-container">
+                            <img src="./images/index-img/akryl-maling-1.webp" alt="" class="smallImgProduct active">
+                            <img src="./images/index-img/akryl-maling-2.webp" alt="" class="smallImgProduct">
+                        </div>
+                        <img src="./images/index-img/akryl-maling-1.webp" alt="" class="bigImgProduct">
+                    </div>
+
+                    <div class="omProduktet">
+                        <div class="product-info">
+                            <h3 class="produktHeading">Om produktet</h3>
+                            <p class="omProduktetText">Panduro Acrylic Matt sett, uansett om du akkurat skal begynne med
+                                akrylmaling eller bare trenger å fylle arsenalet, vil du ha stor glede av dette settet. Her
+                                har vi samlet matte basisfarger i studiokvalitet, som er alt du trenger for å blande alle
+                                verdens nyanser – uansett om du er nybegynner eller har flere års erfaring.
+                            </p>
+                        </div>
+
+                        <div class="plus-minus-container">
+                            <i class="fa-solid fa-plus plus-icon showText"></i>
+                            <i class="fa-solid fa-minus minus-icon hideText"></i>
+                        </div>
+                    </div>
+
+                    <div class="produktdetaljer">
+                        <div class="product-info">
+                            <h3 class="produktHeading">Produktdetaljer</h3>
+                        </div>
+                        <div class="plus-minus-container">
+                            <i class="fa-solid fa-plus plus-icon showText"></i>
+                            <i class="fa-solid fa-minus minus-icon hideText"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid-box last-box">
+                    <div class="rating">
+                        <div class="star-box">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-regular fa-star empty-star"></i>
+                        </div>
+                        <p>53 anmeldelser</p>
+                    </div>
+
+                    <div class="name-box">
+                        <div class="name">
+                            <h1 class="product-name">Panduro Acrylic</h1>
+                            <h1 class="product-name">529 kr</h1>
+                        </div>
+                        <p>24×30 ml med matte akrylfarger</p>
+                    </div>
+
+                    <div class="add-box">
+                        <div class="endre-antall"><i class="fa-solid fa-minus minus-icon"></i> 1 <i
+                                class="fa-solid fa-plus plus-icon"></i></div>
+                        <button class="addProductToCart">Legg i handlekurven</button>
+                        <i class="fa-solid fa-heart addToFavouritesBtn productsite"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="logo"><a href="#"><img src="./images/logo.png" alt="logo"></a></div>
+                <div class="footer-box">
+                    <h2>Informasjon</h2>
+                    <ul>
+                        <li><a href="#">Kontakt oss</a></li>
+                        <li><a href="#">Finn butikk</a></li>
+                        <li><a href="#">Spørsmål & svar</a></li>
+                        <li><a href="#">Favoritter</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h2>Kundeklubb</h2>
+                    <ul>
+                        <li><a href="#">Om kundeklubben</a></li>
+                        <li><a href="#">Medlemsfordeler</a></li>
+                        <li><a href="#">Opprett konto</a></li>
+                        <li><a href="#">Glemt passord</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h2>Om oss</h2>
+                    <ul>
+                        <li><a href="#">Dette er Panduro</a></li>
+                        <li><a href="#">Ledige stillinger</a></li>
+                        <li><a href="#">Samarbeidspartnere</a></li>
+                        <li><a href="#">Pressekontakt</a></li>
+                        <li><a href="#">Bærekraft</a></li>
+                        <li><a href="#">Sponsing</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="some-container">
+                <a href="https://www.facebook.com/pandurohobby.no"><i
+                        class="fa-brands fa-square-facebook facebook"></i></a>
+                <a href="https://www.instagram.com/panduroofficial/"><i
+                        class="fa-brands fa-square-instagram instagram"></i></a>
+                <a href="https://www.youtube.com/pandurohobbywebtube"><i
+                        class="fa-brands fa-square-youtube youtube"></i></a>
+                <a href="https://www.pinterest.se/pandurohobby/"><i
+                        class="fa-brands fa-square-pinterest pinterest"></i></a>
+            </div>
+
+        </div>
+
+        <div class="bottom-line"></div>
+    </footer>
+
+</body>
+
+</html>

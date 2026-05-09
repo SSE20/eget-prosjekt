@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --pink: #ffb5bf;
+    --red: #cf4538;
+    --yellow: #ffd77c;
+    --blue: #abcbd8;
+
+    --yellow-light: #F8EFDE;
+    --yellow-lightest: #FCF6ED;
+    --p-color-blue: #2E1D1D;
+
+    --ff-headings: "Averia Serif Libre", serif;
+    --ff-txt: "Plus Jakarta Sans", sans-serif;
+
+    --br: 20px;
+
+    --transition: 300ms;
+}
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+body {
+    position: relative;
+    font-family: var(--ff-txt);
+
+    min-height: 100vh;
+    background-color: var(--yellow-light);
+}
+
+
+
+/* NAV-BAR */
+.nav-active.product{
+    border-radius: 0;
+}
+
+
+
+
+/* PRODUCT-PAGE******** */
+
+.backToIndex{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--red);
+    margin: 50px 0 20px 0;
+}
+
+.product-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.product-grid-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-images{
+    display: flex;
+    gap: 10px;
+    
+    background-color: var(--yellow-lightest);
+    border-radius: var(--br);
+    padding: 20px;
+}
+
+.product-images img{
+    border-radius: var(--br);
+}
+
+.bigImgProduct{
+    max-width: 500px;
+}
+
+.smallImg-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    max-width: 100px;
+}
+
+.smallImgProduct{
+    border: 2px solid transparent;
+}
+
+.smallImgProduct:hover{
+    cursor: pointer;
+    border: var(--red) 2px solid;
+}
+
+.smallImgProduct.active{
+    border: var(--red) 2px solid;
+}
+
+.omProduktet{
+    background-color: var(--pink);
+    color: var(--red);
+    padding: 10px;
+    border-radius: var(--br);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.produktHeading{
+    font-family: var(--ff-headings);
+    font-size: 25px;
+}
+
+.omProduktetText{
+    max-height: 0;
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+.plus-minus-container{
+    position: relative;
+}
+
+.plus-minus-container i{
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.hideText{
+    opacity: 0;
+}
+
+.produktdetaljer{
+    background-color: var(--blue);
+    color: var(--red);
+    padding: 10px;
+    border-radius: var(--br);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+.product-grid-box.last-box{
+    background-color: var(--yellow-lightest);
+    border-radius: var(--br);
+    padding: 20px;
+
+    gap: 40px;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.star-box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--red);
+}
+
+.rating p{
+    cursor: pointer;
+
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.name-box{
+    color: var(--red);
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-name{
+    font-size: 45px;
+}
+
+.name-box p{
+    font-weight: 700;
+}
+
+.add-box{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.endre-antall{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    color: var(--red);
+    background-color: var(--pink);
+    border-radius: var(--br);
+    padding: 5px 10px;
+}
+
+.minus-icon, .plus-icon{
+    background-color: var(--red);
+    color: var(--pink);
+    padding: 5px;
+    border-radius: 50%;
+
+    min-width: 22px;
+
+    font-size: 12px;
+    text-align: center;
+
+    transition: var(--transition);  
+}
+
+.minus-icon:hover, .plus-icon:hover{
+    cursor: pointer;
+
+    background-color: var(--yellow-lightest);
+    color: var(--red);
+    border-radius: 50%;
+}
+
+.addProductToCart{
+    background-color: var(--red);
+    color: var(--pink);
+    font-weight: 700;
+
+    border-radius: var(--br);
+    border: 2px solid transparent;
+    padding: 7px 20px;
+
+    transition: var(--transition);
+}
+
+.addProductToCart:hover{
+    cursor: pointer;
+
+    border: var(--red) 2px solid;
+    background-color: var(--yellow);
+    border-radius: var(--br);
+    color: var(--red);
+}
+
+.addToFavouritesBtn.productsite{
+    position: inherit;
+
+    min-width: 30px;
+}

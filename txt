@@ -7,15 +7,10 @@ ting jeg vil ha med på siden:
 - i nav-baren når man trykker på en av greiene kommer det opp en liste med linker (en pil som bytter fra å gå opp/ned)
 
 når man trykker på cart så kommer handlekurven din opp på siden
-hvis man trykker på "ny kolleksjon ute nå" så blar den ned til den nye kolleksjonen
-
-hvis man legger til et produkt i handlekurven kommer det en rød prikk på kurven, og et tall som viser antall produkter i kurven
 
 bla opp til toppen - knapp
 
 
-FIKS: filter og sort by
+FIKS: filter og media-queries
 
 skrive sånn -50% på et produkt og streke over den gamle prisen, og vise den nye på siden
-
-når det er mousover på et produkt, endres bildet til det neste
