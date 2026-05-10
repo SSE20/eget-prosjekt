@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panduro Cart</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="cart-page.css">
+    <link rel="stylesheet" href="product-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,10 +15,10 @@
 <body>
     <nav>
         <div class="container">
-            <div class="logo"><a href="#"><img src="./images/logo.png" alt="logo"></a></div>
+            <div class="logo"><a href="index.html"><img src="./images/logo.png" alt="logo"></a></div>
             <div class="nav-links">
-                <a href="#">Hjem</a>
-                <a href="#" class="nav-active product">Produkter</a>
+                <a href="index.html">Hjem</a>
+                <a href="product-page.html" class="nav-active product">Produkter</a>
                 <a href="#">Inspirasjon</a>
                 <a href="#">Om oss</a>
             </div>
@@ -47,35 +47,49 @@
                 <div class="product-grid-box first-box">
                     <div class="product-images">
                         <div class="smallImg-container">
-                            <img src="./images/index-img/akryl-maling-1.webp" alt="" class="smallImgProduct active">
-                            <img src="./images/index-img/akryl-maling-2.webp" alt="" class="smallImgProduct">
+                            <img src="./images/index-img/akryl-maling-1.webp" alt="" class="smallImgProduct active imgTop">
+                            <img src="./images/index-img/akryl-maling-2.webp" alt="" class="smallImgProduct imgBottom">
                         </div>
-                        <img src="./images/index-img/akryl-maling-1.webp" alt="" class="bigImgProduct">
+                        <div class="bigImg-container">
+                            <img src="./images/index-img/akryl-maling-1.webp" alt="" class="bigImgProduct firstPic visable">
+                            <img src="./images/index-img/akryl-maling-2.webp" alt="" class="bigImgProduct secondPic hidden">
+                        </div>
                     </div>
 
                     <div class="omProduktet">
                         <div class="product-info">
                             <h3 class="produktHeading">Om produktet</h3>
                             <p class="omProduktetText">Panduro Acrylic Matt sett, uansett om du akkurat skal begynne med
-                                akrylmaling eller bare trenger å fylle arsenalet, vil du ha stor glede av dette settet. Her
-                                har vi samlet matte basisfarger i studiokvalitet, som er alt du trenger for å blande alle
+                                akrylmaling eller bare trenger å fylle arsenalet, vil du ha stor glede av dette settet.
+                                Her
+                                har vi samlet matte basisfarger i studiokvalitet, som er alt du trenger for å blande
+                                alle
                                 verdens nyanser – uansett om du er nybegynner eller har flere års erfaring.
                             </p>
                         </div>
 
                         <div class="plus-minus-container">
-                            <i class="fa-solid fa-plus plus-icon showText"></i>
-                            <i class="fa-solid fa-minus minus-icon hideText"></i>
+                            <i class="fa-solid fa-plus plus-icon showOmProduktetText"></i>
+                            <i class="fa-solid fa-minus minus-icon hideOmProduktetText"></i>
                         </div>
                     </div>
 
-                    <div class="produktdetaljer">
+                    <div class="sikkerhet-miljo">
                         <div class="product-info">
-                            <h3 class="produktHeading">Produktdetaljer</h3>
+                            <h3 class="produktHeading">Sikkerhet & Miljø</h3>
+                            <p class="sikkerhetMiljoText">Ansvarlig EU
+                                <ul class="sikkerhetMiljoText liste">
+                                    <li>Panduro Acrylic</li>
+                                    <li>Panduro</li>
+                                    <li>205 14 Malmö, Sweden</li>
+                                    <li>www.panduro.com</li>
+                                    <li>+46 (04) 22 30 70</li>
+                                </ul>
+                            </p>
                         </div>
                         <div class="plus-minus-container">
-                            <i class="fa-solid fa-plus plus-icon showText"></i>
-                            <i class="fa-solid fa-minus minus-icon hideText"></i>
+                            <i class="fa-solid fa-plus plus-icon showSikkerhetMiljoText"></i>
+                            <i class="fa-solid fa-minus minus-icon hideSikkerhetMiljoText"></i>
                         </div>
                     </div>
                 </div>
@@ -100,9 +114,45 @@
                         <p>24×30 ml med matte akrylfarger</p>
                     </div>
 
+                    <div class="produktdetaljer-box">
+                        <h2 class="produktHeading">Produktdetaljer</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Artikkelnummer</td>
+                                    <td>180055</td>
+                                </tr>
+                                <tr>
+                                    <td>Merke</td>
+                                    <td>Panduro Acrylic</td>
+                                </tr>
+                                <tr>
+                                    <td>Overflate</td>
+                                    <td>Matt</td>
+                                </tr>
+                                <tr>
+                                    <td>Base</td>
+                                    <td>BaseIngredients_water</td>
+                                </tr>
+                                <tr>
+                                    <td>Herding</td>
+                                    <td>Lufttørking</td>
+                                </tr>
+                                <tr>
+                                    <td>Tørketid</td>
+                                    <td>30 minutter</td>
+                                </tr>
+                                <tr>
+                                    <td>Volum (l)</td>
+                                    <td>0,03</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <div class="add-box">
-                        <div class="endre-antall"><i class="fa-solid fa-minus minus-icon"></i> 1 <i
-                                class="fa-solid fa-plus plus-icon"></i></div>
+                        <div class="endre-antall"><i class="fa-solid fa-minus minus-icon minusAntall"></i> <p id="antall">1</p> <i
+                                class="fa-solid fa-plus plus-icon plussAntall"></i></div>
                         <button class="addProductToCart">Legg i handlekurven</button>
                         <i class="fa-solid fa-heart addToFavouritesBtn productsite"></i>
                     </div>
@@ -162,6 +212,10 @@
 
         <div class="bottom-line"></div>
     </footer>
+
+
+    <script src="product-page.js"></script>
+    <script src="app.js"></script>
 
 </body>
 

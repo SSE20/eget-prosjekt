@@ -14,3 +14,5 @@ bla opp til toppen - knapp
 FIKS: filter og media-queries
 
 skrive sånn -50% på et produkt og streke over den gamle prisen, og vise den nye på siden
+
+koble sidene sammmen, slik at hvis man har satt favoritter på index, vil det være favoritt på cart, og hvis det er 4 i handlekurven i index, vil det være 4 i handlekurven i cart

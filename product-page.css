@@ -97,8 +97,24 @@ body {
     border-radius: var(--br);
 }
 
+.bigImg-container{
+    position: relative;
+    min-height: 500px;
+    min-width: 500px;
+}
+
 .bigImgProduct{
+    position: absolute;
+
     max-width: 500px;
+}
+
+.bigImgProduct.visable{
+    opacity: 1;
+}
+
+.bigImgProduct.hidden{
+    opacity: 0;
 }
 
 .smallImg-container{
@@ -135,13 +151,15 @@ body {
 .produktHeading{
     font-family: var(--ff-headings);
     font-size: 25px;
+    color: var(--red);
 }
 
-.omProduktetText{
+.omProduktetText, .sikkerhetMiljoText{
     max-height: 0;
     overflow: hidden;
 
     transition: var(--transition);
+    line-height: 1.5;
 }
 
 .plus-minus-container{
@@ -152,13 +170,15 @@ body {
     position: absolute;
     top: 5px;
     right: 0;
+
+    transition: var(--transition);
 }
 
-.hideText{
+.hideOmProduktetText, .hideSikkerhetMiljoText{
     opacity: 0;
 }
 
-.produktdetaljer{
+.sikkerhet-miljo{
     background-color: var(--blue);
     color: var(--red);
     padding: 10px;
@@ -220,6 +240,18 @@ body {
     font-weight: 700;
 }
 
+table{
+    min-width: 100%;
+}
+
+tr{
+    display: flex;
+    justify-content: space-between;
+    
+    line-height: 1.5;
+    color: var(--red);
+}
+
 .add-box{
     display: flex;
     align-items: center;
@@ -235,6 +267,11 @@ body {
     background-color: var(--pink);
     border-radius: var(--br);
     padding: 5px 10px;
+}
+
+#antall{
+    min-width: 20px;
+    text-align: center;
 }
 
 .minus-icon, .plus-icon{
