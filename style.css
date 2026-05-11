@@ -638,7 +638,7 @@ h2 {
 
 /* MEDIA */
 
-@media (width < 750px) {
+@media (width < 850px) {
 
     /* NAVBAR** */
     .nav-links {
@@ -688,12 +688,88 @@ h2 {
     footer .logo {
         display: none;
     }
+
+    .bottom-line{
+        left: 20px;
+        right: 20px;
+    }
 }
 
 
+@media (width < 675px){
+    /* SIDE 1** */
+    h1 {
+        font-size: 68px;
+    }
+}
+
+@media (width < 600px){
+    /* SIDE 2** */
+
+    .select-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .filter {
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    #filterBtn, #sortByBtn {
+        min-width: 100%;
+        padding: 10px;
+        position: relative;
+    }
+
+    #filterBtn i, .arrow-up, .arrow-down{
+        position: absolute;
+        top: 13px;
+        right: 12px;
+    }
+
+    .sortByPopup{
+        top: 165px;
+    }
 
 
+    /* SIDE 3** */
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+}
 
+@media (width < 580px){
+    /* SIDE 1** */
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (width < 550px){
+    /* FOOTER** */
+    .footer-container{
+        flex-direction: column;
+        gap: 20px;
+
+        text-align: center;
+    }
+}
+
+@media (width < 510px){
+    /* SIDE 1** */
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media (width < 460px){
+    /* NAVBAR** */
+    .logo {
+        display: none;
+    }
+}
 
 
 
@@ -744,45 +820,13 @@ h2 {
 
 
     /* SIDE 2** */
-    .select-bar {
-        flex-direction: column;
+    .select-bar{ 
         justify-content: center;
-        align-items: center;
-        gap: 20px;
     }
-
-    .filter {
-        flex-direction: column;
-        min-width: 100%;
-    }
-
-    #filterBtn, #sortByBtn {
-        min-width: 100%;
-        padding: 10px;
-        position: relative;
-    }
-
-    #filterBtn i, .arrow-up, .arrow-down{
-        position: absolute;
-        top: 13px;
-        right: 12px;
-    }
-
-    .sortByPopup{
-        top: 165px;
-    }
-
-
-    /* SIDE 3** */
-    .grid-container{
-        grid-template-columns: 1fr;
-    }
-
 
     /* FOOTER** */
     .footer-container{
-        flex-direction: column;
-        gap: 20px;
+        text-align: start;
     }
 
     .bottom-line{

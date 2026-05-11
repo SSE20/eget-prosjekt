@@ -125,3 +125,26 @@ addProductToCart.addEventListener("click", function () {
         leggTil()
     }
 })
+
+
+
+
+
+
+/* BURGER (MEDIA) */
+const burgerEl = document.querySelector(".burger")
+const crossEl = document.querySelector(".cross")
+const burgerContainerEl = document.querySelector(".burger-container")
+const navlinksEl = document.querySelector(".nav-links")
+
+burgerContainerEl.addEventListener("click", function(){
+    if (burgerEl.classList.contains("shown")){
+        burgerEl.classList.remove("shown")
+        crossEl.classList.add("shown")
+        navlinksEl.style.top = 70 + "px"
+    }else{
+        crossEl.classList.remove("shown")
+        burgerEl.classList.add("shown")
+        navlinksEl.style.top = -1000 + "px"
+    }
+})
