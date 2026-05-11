@@ -5,14 +5,12 @@ const arrowUpEl = document.querySelector(".arrow-up")
 const arrowDownEl = document.querySelector(".arrow-down")
 
 sortByBtn.addEventListener("click", function () {
-    if (arrowUpEl.style.opacity == "0") {
-        sortByPopup.style.opacity = 1
+    sortByPopup.classList.toggle("show")
 
+    if (sortByPopup.classList.contains("show")) {
         arrowDownEl.style.opacity = "0"
         arrowUpEl.style.opacity = "1"
     } else {
-        sortByPopup.style.opacity = 0
-
         arrowDownEl.style.opacity = "1"
         arrowUpEl.style.opacity = "0"
     }
@@ -79,7 +77,28 @@ for (const box of gridBoxes) {
 
 
     img1.addEventListener("mouseout", function () {
-
         img2.classList.remove("show")
     })
 }
+
+
+
+
+
+/* BURGER (MEDIA) */
+const burgerEl = document.querySelector(".burger")
+const crossEl = document.querySelector(".cross")
+const burgerContainerEl = document.querySelector(".burger-container")
+const navlinksEl = document.querySelector(".nav-links")
+
+burgerContainerEl.addEventListener("click", function(){
+    if (burgerEl.classList.contains("shown")){
+        burgerEl.classList.remove("shown")
+        crossEl.classList.add("shown")
+        navlinksEl.style.top = 70 + "px"
+    }else{
+        crossEl.classList.remove("shown")
+        burgerEl.classList.add("shown")
+        navlinksEl.style.top = -1000 + "px"
+    }
+})
