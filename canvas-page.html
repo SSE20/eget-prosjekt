@@ -42,6 +42,60 @@
             right: 260px;
         }
 
+        .for-liten{
+            display: none;
+        }
+
+        @media (width < 1440px){
+            .remove-all-btn{
+                right: 240px;
+            }
+        }
+        @media (width < 1375px){
+            .remove-all-btn{
+                right: 200px;
+            }
+        }
+        @media (width < 1310px){
+            .remove-all-btn{
+                right: 170px;
+            }
+        }
+        @media (width < 1240px){
+            .remove-all-btn{
+                right: 140px;
+            }
+        }
+        @media (width < 1190px){
+            .remove-all-btn{
+                right: 120px;
+            }
+        }
+        @media (width < 1140px){
+            .remove-all-btn{
+                right: 100px;
+            }
+        }
+        @media (width < 1080px){
+            .remove-all-btn{
+                right: 70px;
+            }
+        }
+
+        @media (width < 1035px){
+            canvas{
+                display: none;
+            }
+
+            .remove-all-btn{
+                display: none;
+            }
+
+            .for-liten{
+                display: block;
+            }
+        }
+
     </style>
 </head>
 
@@ -58,6 +112,10 @@
     
 
     <i class="fa-solid fa-trash-can remove-all-btn"></i>
+
+    <div class="for-liten">
+        <p>Skjermen er for liten til å vise spillet.</p>
+    </div>
 
     <script>
         const canvas = document.querySelector("canvas")
