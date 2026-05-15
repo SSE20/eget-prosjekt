@@ -20,6 +20,50 @@ sortByBtn.addEventListener("click", function () {
 
 
 
+/* FILTER******** */
+const filterBtn = document.getElementById("filterBtn")
+const filterPopup = document.querySelector(".filterPopup")
+filterBtn.addEventListener("click", function(){
+    filterPopup.classList.toggle("show")
+})
+
+const checkBoxes = document.querySelectorAll(".checkBox")
+for (const checkBox of checkBoxes) {
+    checkBox.addEventListener("click", function () {
+        if (checkBox.style.color == "var(--blue)") {
+            checkBox.style.color = "var(--red)"
+        } else {
+            checkBox.style.color = "var(--blue)"
+        }
+    })
+}
+
+const showAlderOption = document.querySelector(".filter-options.alder")
+const filterLiAlderBox = document.querySelector(".alderBox")
+filterLiAlderBox.addEventListener("click", function () {
+    if (showAlderOption.clientHeight == 0) {
+        showAlderOption.style.maxHeight = 90 + "px"
+    } 
+    else {
+        showAlderOption.style.maxHeight = 0
+    }
+})
+
+const showLagerOption = document.querySelector(".filter-options.lager")
+const filterLiLagerBox = document.querySelector(".lagerBox")
+filterLiLagerBox.addEventListener("click", function (){
+    if (showLagerOption.clientHeight == 0) {
+        showLagerOption.style.maxHeight = 60 + "px"
+    } else {
+        showLagerOption.style.maxHeight = 0
+    }
+})
+
+
+
+
+
+
 
 /* ADD TO CART */
 const addToCartBtn = document.querySelectorAll(".addToCartBtn")
@@ -56,7 +100,7 @@ for (const btn of addToCartBtn) {
 const addToFavouritesBtn = document.querySelectorAll(".addToFavouritesBtn")
 
 for (const btn of addToFavouritesBtn) {
-    btn.addEventListener("click", function(){
+    btn.addEventListener("click", function () {
         btn.classList.toggle("added")
     })
 }
@@ -91,12 +135,12 @@ const crossEl = document.querySelector(".cross")
 const burgerContainerEl = document.querySelector(".burger-container")
 const navlinksEl = document.querySelector(".nav-links")
 
-burgerContainerEl.addEventListener("click", function(){
-    if (burgerEl.classList.contains("shown")){
+burgerContainerEl.addEventListener("click", function () {
+    if (burgerEl.classList.contains("shown")) {
         burgerEl.classList.remove("shown")
         crossEl.classList.add("shown")
         navlinksEl.style.top = 70 + "px"
-    }else{
+    } else {
         crossEl.classList.remove("shown")
         burgerEl.classList.add("shown")
         navlinksEl.style.top = -1000 + "px"
